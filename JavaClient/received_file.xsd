@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Definition of 'Garden' element -->
+  <xs:element name="garden" type="gardenType"/>
+
+  <!-- Reference to 'author' element -->
+  <xs:element name="author" type="authorType"/>
+
+  <!-- Reference to 'account' element -->
+  <xs:element name="account" type="accountType"/>
+
+  <!-- Reference to 'awards' element -->
+  <xs:element name="awards" type="awardsType"/>
+
+  <!-- Reference to 'books' element -->
+  <xs:element name="books" type="booksType"/>
+
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="password" type="xs:string"/>
+  <xs:element name="userName" type="xs:string"/>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="years" type="xs:string"/>
+  <xs:element name="name" type="xs:string"/>
+
+  <!-- Definition of 'gardenType' complex type -->
+  <xs:complexType name="gardenType">
+    <xs:sequence>
+      <xs:element ref="authors"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Reference to 'authors' element -->
+  <xs:element name="authors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="author" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definition of 'authorType' complex type -->
+  <xs:complexType name="authorType">
+    <xs:sequence>
+      <xs:element ref="account"/>
+      <xs:element ref="awards" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="books" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="firstName"/>
+      <xs:element ref="id"/>
+      <xs:element ref="lastName"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definition of 'accountType' complex type -->
+  <xs:complexType name="accountType">
+    <xs:sequence>
+      <xs:element ref="id"/>
+      <xs:element ref="password"/>
+      <xs:element ref="userName"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definition of 'awardsType' complex type -->
+  <xs:complexType name="awardsType">
+    <xs:sequence>
+      <xs:element ref="id"/>
+      <xs:element ref="title"/>
+      <xs:element ref="years"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definition of 'booksType' complex type -->
+  <xs:complexType name="booksType">
+    <xs:sequence>
+      <xs:element ref="id"/>
+      <xs:element ref="name"/>
+      <xs:element ref="years"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"lt.eif.viko.iorlovic.javaserver.javaclient","l":"JavaClient"},{"p":"lt.eif.viko.iorlovic.javaserver","l":"Main"},{"p":"lt.eif.viko.iorlovic.javaserver.transformer","l":"TransformToPojo"}];updateSearchResults();

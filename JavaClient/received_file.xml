@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<authors>
+    <author>
+        <account>
+            <id>2</id>
+            <password>Password1</password>
+            <userName>Username1</userName>
+        </account>
+        <awards>
+            <id>3</id>
+            <title>Award1</title>
+            <years>2008</years>
+        </awards>
+        <awards>
+            <id>4</id>
+            <title>Award2</title>
+            <years>2010</years>
+        </awards>
+        <books>
+            <id>5</id>
+            <name>Book1</name>
+            <years>2005</years>
+        </books>
+        <books>
+            <id>6</id>
+            <name>Book2</name>
+            <years>2006</years>
+        </books>
+        <firstName>Name1</firstName>
+        <id>1</id>
+        <lastName>LastName1</lastName>
+    </author>
+</authors>
